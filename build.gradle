@@ -1,0 +1,23 @@
+apply plugin: 'scala'
+apply plugin: 'idea'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.scala-lang:scala-library:2.11.6"
+
+    testCompile "org.testng:testng:6.8"
+}
+
+test {
+    // enable TestNG support (default is JUnit)
+    useTestNG()
+
+    // listen to events in the test execution lifecycle
+    beforeTest { descriptor ->
+       logger.lifecycle("Running test: " + descriptor)
+    }
+}
