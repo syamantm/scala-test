@@ -3,11 +3,23 @@
 ### Compile
 
 ```
-gradle compileScala
+$ gradle compileScala
+```
+
+or using gradle wrapper
+
+```
+$ ./gradlew compileScala
 ```
 
 ### Run Test
 
 ```
-gradle test
+$ gradle test
+```
+
+or using gradle wrapper
+
+```
+$ ./gradlew test
 ```
