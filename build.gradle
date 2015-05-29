@@ -2,10 +2,10 @@ apply plugin: 'scala'
 apply plugin: 'idea'
 
 
-group = "com.schibsted.example"
+group = "com.syamantakm.scala"
 version = '1.1-SNAPSHOT'
 
-description = """api-scala"""
+description = """scala-test"""
 
 repositories {
     mavenCentral()
@@ -13,10 +13,6 @@ repositories {
 
 dependencies {
     compile "org.scala-lang:scala-library:2.11.6"
-    compile 'com.netflix.karyon:karyon2-admin-web:2.7.1'
-    compile 'com.netflix.karyon:karyon2-eureka:2.7.1'
-    compile 'com.netflix.karyon:karyon2-archaius:2.7.1'
-    compile 'com.netflix.karyon:karyon2-servo:2.7.1'
 
     testCompile "org.testng:testng:6.8"
     testCompile group: 'org.mockito', name: 'mockito-core', version:'1.10.19'
