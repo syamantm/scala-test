@@ -11,8 +11,8 @@ import rx.Observable
  */
 class HelloHandler extends RequestHandler[ByteBuf, ByteBuf] {
   override def handle(request: HttpServerRequest[ByteBuf], response: HttpServerResponse[ByteBuf]): Observable[Void] = {
-    request.getUri match {
-      case "*/hello" => response.writeString("Hello from Scala")
+    request.getUri.endsWith("hello") match {
+      case true => response.writeString("Hello from Scala")
       case _ => response.setStatus(HttpResponseStatus.NOT_FOUND)
     }
     response.close(true)
